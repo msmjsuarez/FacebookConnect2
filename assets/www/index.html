@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>		
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.ui.map.min.js"></script>
+		<script src="js/jquery.mobile-1.3.1.min.js"></script>
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/plugin.css" />
+        <title>Facebook Connect</title>
+    </head>
+    <body>   
+    		<script>
+			    //onDeviceReady is called when PhoneGap is initial
+			    function onDeviceReady() {        
+				    $(document).ready(function() {            
+				    //Call any jQuery functions here        
+				    });
+			    }
+			    document.addEventListener("deviceready", onDeviceReady);
+	    	</script>
+    
+    	<div data-role="page" data-theme="e" id="home">
+    		<div data-role="header" data-position="fixed" data-theme="e">
+    			<h1>Home</h1>   		
+    		</div>
+    		<div data-role="content">    
+    			<h1>Facebook Connect</h1>
+	    		<div id="profile_pic" class="center-wrapper"></div>
+		            <div id="name"></div>
+		            <div id="gender"></div> 
+		            <div id="birthday"></div> 
+		            <div id="email"></div> 
+		            <div id="quotes"></div> 
+
+		            <div id="title"></div>
+		            <div id="profile_picf" class="center-wrapper"></div>
+			        <!--<div id="namef"></div>-->	            
+    		</div>
+    		<div data-role="footer" class="ui-bar" data-theme="e">
+				<a href="#" data-role="button" onclick="plugin.login();" data-theme="e">Login</a>
+				<a href="#" data-role="button" data-rel="dialog" onclick="plugin.requestWithGraphPath();" data-theme="e">Fetch Friends</a>
+				<a href="#" data-role="button" onclick="plugin.logout();" data-theme="e">Logout</a>
+    		</div>
+    	</div>
+    	
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="plugin.js"></script>
+        <script type="text/javascript" src="FacebookConnect.js"></script>
+        <script type="text/javascript"> 
+		app.initialize();
+        </script>
+    </body>
+</html>

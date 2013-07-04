@@ -1,0 +1,16 @@
+body {
+	vertical-align: top; text-transform: none;
+}
+h1, h2, h3 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.app {
+	margin-top: 0px;
+	top: 20px;
+}
+
+.center-wrapper {
+margin: 0 auto;
+text-align: center;
+}
